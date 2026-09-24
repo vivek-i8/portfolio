@@ -24,7 +24,7 @@ const signature = Alex_Brush({
     display: 'swap',
 });
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://vivekkumawat.dev').replace(/\/$/, '');
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://vivekk.runs-on.dev').replace(/\/$/, '');
 
 export const metadata: Metadata = {
     title: {

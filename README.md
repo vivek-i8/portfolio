@@ -37,6 +37,7 @@ Each project has a full case study on the site at `/projects/<slug>` (slugs matc
 
 ## Links
 
+- Live Portfolio: https://vivekk.runs-on.dev
 - GitHub: https://github.com/vivek-i8
 - LinkedIn: https://www.linkedin.com/in/vivekkumawat18/
 - X: https://x.com/vivekxspace
