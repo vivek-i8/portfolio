@@ -307,7 +307,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
           <div className="flex items-center gap-6">
             <Separator className="flex-1 h-[1px] bg-foreground/10 hidden md:block" />
             <div className="text-[10px] md:text-xs whitespace-nowrap font-bold tracking-[0.3em] text-muted-foreground uppercase">
-              BENGALURU, IN Â· 2026
+              BENGALURU, IN · 2026
             </div>
             <Link
               href="/resume"

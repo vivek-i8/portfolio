@@ -547,7 +547,7 @@ export const CANONICAL_PROJECTS: Project[] = [
             ],
             evaluation: [
                 { metric: 'Baseline Accuracy (784 features)', value: '~92.5%', note: 'Multinomial logistic regression provides a strong linear benchmark.' },
-                { metric: '30-Run Sampling Variance', value: 'Â±0.4% (95% CI)', note: 'Quantifies empirical sensitivity across 10,000-sample draws.' },
+                { metric: '30-Run Sampling Variance', value: '±0.4% (95% CI)', note: 'Quantifies empirical sensitivity across 10,000-sample draws.' },
                 { metric: 'PCA Feature Reduction', value: '~75% Reduction', note: 'Preserving 95% variance maintains ~90% classification accuracy.' }
             ],
             engineeringNotes: [

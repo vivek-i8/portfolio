@@ -49,7 +49,7 @@ function useCardFocus(ref: React.RefObject<HTMLElement | null>) {
     };
 }
 
-/** Projects intro panel Ã¢â‚¬â€ shown on the right side of the horizontal transition */
+/** Projects intro panel — shown on the right side of the horizontal transition */
 function ProjectsIntroPanel({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
     const introOpacity = useTransform(scrollYProgress, [0.2, 0.8], [0, 1]);
 

@@ -160,7 +160,7 @@ function ProjectListItem({
         };
     }, []);
 
-    const techText = project.techStack.join(' â€¢ ');
+    const techText = project.techStack.join(' • ');
     const bgGradient = useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(255, 255, 255, 0.03), transparent 40%)`;
 
     return (
@@ -273,7 +273,7 @@ function ProjectListItem({
                                     >
                                         {[...Array(4)].map((_, i) => (
                                             <span key={i} className={cn("mx-4 text-sm font-mono tracking-wider", isOngoing ? "text-emerald-600/60 dark:text-emerald-400/60" : "text-blue-600/60 dark:text-blue-400/60")}>
-                                                {techText} â€¢
+                                                {techText} •
                                             </span>
                                         ))}
                                     </motion.div>
@@ -331,7 +331,7 @@ function ProjectListItem({
     );
 }
 
-// Curated badge color palette â€” vibrant but balanced for both light & dark modes
+// Curated badge color palette — vibrant but balanced for both light & dark modes
 const BADGE_COLORS = [
     { border: 'rgba(168, 85, 247, 0.5)', bg: 'rgba(168, 85, 247, 0.12)', text: 'rgb(168, 85, 247)' },   // purple
     { border: 'rgba(59, 130, 246, 0.5)', bg: 'rgba(59, 130, 246, 0.12)', text: 'rgb(59, 130, 246)' },    // blue
@@ -347,7 +347,7 @@ const BADGE_COLORS = [
     { border: 'rgba(217, 70, 239, 0.5)', bg: 'rgba(217, 70, 239, 0.12)', text: 'rgb(217, 70, 239)' },    // fuchsia
 ];
 
-// Deterministic color from string â€” same string always gets same color, but varied across badges
+// Deterministic color from string — same string always gets same color, but varied across badges
 function getBadgeColor(label: string, cardIndex: number) {
     let hash = 0;
     for (let i = 0; i < label.length; i++) {
@@ -398,7 +398,7 @@ function ProjectCard({ project, onClick, index, isLowPowerMode }: { project: Pro
         });
     };
 
-    // Use Lenis to detect scroll velocity â€” only runs work if this card is currently hovered
+    // Use Lenis to detect scroll velocity — only runs work if this card is currently hovered
     useLenis((lenis) => {
         if (isLowPowerMode || !isHoveredRef.current) return;
         const velocity = Math.abs(lenis.velocity);
@@ -929,7 +929,7 @@ export default function ProjectsPage() {
                         )}
                     </div>
 
-                    {/* View All Button â€” Magnetic Fill-Invert */}
+                    {/* View All Button — Magnetic Fill-Invert */}
                     {
                         filteredProjects.length > 10 && (
                             <motion.div

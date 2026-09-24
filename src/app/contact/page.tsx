@@ -380,7 +380,7 @@ export default function ContactPage() {
                 </div>
             </DeferredMount>
 
-            {/* MAIN CONTENT Ã¢â‚¬â€ No transforms or filters on this ancestor so position:sticky works natively */}
+            {/* MAIN CONTENT — No transforms or filters on this ancestor so position:sticky works natively */}
             <div className="relative z-10">
                 <div className="relative w-full pt-28 pb-4 overflow-hidden">
                     <div className="w-full flex items-center justify-center opacity-20 select-none pointer-events-none">
@@ -394,9 +394,9 @@ export default function ContactPage() {
                 </div>
 
                 {/*
-                  Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
-                  CONTACT COMPOSITION Ã¢â‚¬â€ ONE grid, ONE sticky parent
-                  Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+                  ===============================================
+                  CONTACT COMPOSITION — ONE grid, ONE sticky parent
+                  ===============================================
                   The grid spans the COMPLETE right-side content.
                   The left video stays sticky for the full duration.
                   The sticky parent ends AFTER SEND MESSAGE.
@@ -443,7 +443,7 @@ export default function ContactPage() {
 
                             <ContactForm />
 
-                            {/* EXIT SENTINEL Ã¢â‚¬â€ at the natural end of SEND MESSAGE / right column */}
+                            {/* EXIT SENTINEL — at the natural end of SEND MESSAGE / right column */}
                             <div ref={exitSentinelRef} className="w-full h-px pointer-events-none" aria-hidden="true" />
                         </main>
 

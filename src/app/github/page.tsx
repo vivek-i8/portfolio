@@ -83,7 +83,7 @@ export default function GitHubPage() {
           <div className="inline-flex items-center gap-3 text-[#39d353]">
             <Github className="w-7 h-7" />
             <span className="text-xs font-mono font-bold tracking-[0.3em] uppercase">
-              @vivek-i8 Â· Public Engineering Footprint
+              @vivek-i8 · Public Engineering Footprint
             </span>
           </div>
 
@@ -295,7 +295,7 @@ export default function GitHubPage() {
         {/* Footer Navigation Back to Portfolio */}
         <div className="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="font-mono text-xs text-neutral-400">
-            Â© 2026 Vivek Kumawat Â· Public Systems &amp; Repositories
+            © 2026 Vivek Kumawat · Public Systems &amp; Repositories
           </p>
           <div className="flex items-center gap-4">
             <Link

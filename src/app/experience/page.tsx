@@ -158,7 +158,7 @@ function ExperienceTabSlider({ isLowPowerMode }: { isLowPowerMode: boolean }) {
                     <div className="p-6 rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-sm">
                         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                             <h4 className="text-xl font-bold text-white">Harzio AI/ML Internship &amp; Capstone</h4>
-                            <span className="font-mono text-xs px-2.5 py-1 rounded bg-[#c1e44a]/10 border border-[#c1e44a]/30 text-[#c1e44a]">JUNE 2026 Ã¢â‚¬â€ JULY 2026</span>
+                            <span className="font-mono text-xs px-2.5 py-1 rounded bg-[#c1e44a]/10 border border-[#c1e44a]/30 text-[#c1e44a]">JUNE 2026 — JULY 2026</span>
                         </div>
                         <p className="text-sm text-neutral-300 mb-4 leading-relaxed">
                             Applied machine learning internship encompassing end-to-end model workflows: data preprocessing, regression models, classification systems, model evaluation telemetry, and the final SkySense AI capstone.
@@ -175,7 +175,7 @@ function ExperienceTabSlider({ isLowPowerMode }: { isLowPowerMode: boolean }) {
                     <div className="p-6 rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-sm">
                         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                             <h4 className="text-xl font-bold text-white">AI-Native Systems &amp; Autonomous Agents</h4>
-                            <span className="font-mono text-xs px-2.5 py-1 rounded bg-white/10 text-neutral-300">2026 Ã¢â‚¬â€ PRESENT</span>
+                            <span className="font-mono text-xs px-2.5 py-1 rounded bg-white/10 text-neutral-300">2026 — PRESENT</span>
                         </div>
                         <p className="text-sm text-neutral-300 mb-4 leading-relaxed">
                             Architected production-oriented AI software including HITMAN (autonomous intelligent agent), VAANI (voice authenticity verification), and Lumina (movie discovery engine).

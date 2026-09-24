@@ -151,7 +151,7 @@ export function Footer() {
                             {/* Left Side - Animated Copyright */}
                             <div className="flex items-center gap-1.5 md:gap-2 pl-2 md:pl-4 z-10 overflow-hidden h-6">
                                 <span className={`text-xs md:text-sm font-bold uppercase tracking-widest text-gradient`}>
-                                    Â© {currentYear}
+                                    © {currentYear}
                                 </span>
                                 <div className="relative w-[280px] h-full flex items-center">
                                     <AnimatePresence mode="popLayout">
