@@ -1,0 +1,276 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "experience": "Experience",
+        "skills": "Skills",
+        "contact": "Contact",
+        "resume": "Resume",
+        "tools": "Tools",
+        "menu": {
+            "skills": "Skills",
+            "skillsDesc": "Technologies and tools I work with",
+            "experience": "Experience",
+            "experienceDesc": "My professional journey and growth",
+            "projects": "Projects",
+            "projectsDesc": "A showcase of all my work",
+            "resume": "Resume",
+            "resumeDesc": "View or download my CV"
+        },
+        "shortcuts": {
+            "volume1": "Volume I: Identity",
+            "volume2": "Volume II: Professional Sequence",
+            "volume3": "Volume III: Competency Matrix",
+            "volume4": "Volume IV: Creative Output",
+            "preview": "Preview Mode",
+            "idRef": "ID_REF"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "Tech Explorer & Problem Solver",
+        "description": "A passionate tech explorer specializing in Full Stack Development, Artificial Intelligence, and Data Science. Currently diving deep into AI Agents and Blockchain technology.",
+        "identity": "Identity Link Established",
+        "architecting": "Architecting",
+        "digitalReality": "Digital Reality",
+        "leadIn": {
+            "label": "WHAT I DO",
+            "tagline": "CORE FOCUS",
+            "headlineAI": "AI-native",
+            "headlineData": "applications.",
+            "headlineSoftware": "Software, from first principles",
+            "thesis": "I’m interested in what happens when AI becomes part of the product: connecting models to APIs, backends, data, interfaces, and the software needed to make it useful.",
+            "scope": "Machine learning, deep learning, LLMs, and agentic applications, with hands-on work across training, inference, evaluation, experimentation, and putting models into software.",
+            "bridging": "",
+            "integration": "Python, APIs, databases, services, and full-stack applications: the engineering layer that carries an idea from experiment to something people can actually use.",
+            "signature": "Vivek",
+            "role": "AI / ML · SOFTWARE ENGINEERING",
+            "aboutMe": "About Me",
+            "scroll": "Scroll to Explore",
+            "shortStory": "My Short Story"
+        },
+        "coreEngineering": {
+            "label": "Core Engineering",
+            "title": "Proven <span class='text-primary italic font-serif font-light lowercase'>stack.</span> <br /> Measurable <span class='italic font-serif font-light text-foreground'>results.</span>",
+            "p1": "I develop applied AI systems using TensorFlow, Scikit-learn, and LangChain, structuring workflows and exposing models as services through Flask and FastAPI.",
+            "p2": "Integrated into full-stack apps with Next.js, Express.js, and Spring Boot, backed by PostgreSQL and Prisma ORM.",
+            "p3": "All projects use disciplined version control, Docker containerization, and are built for stable production deployment.",
+            "gpa": "Academic GPA",
+            "projects": "Projects Built",
+            "years": "Years Exp."
+        },
+        "emergingResearch": {
+            "label": "Exploration Phase",
+            "title": "EMERGING RESEARCH <span class='italic font-serif font-light text-primary lowercase'>&</span> EXPANSION",
+            "agentic": {
+                "title": "AGENTIC AI SYSTEMS",
+                "desc": "Exploring autonomous agents, multi-agent orchestration, and reasoning frameworks — extending my applied AI foundation into self-directed decision-making systems."
+            },
+            "web3": {
+                "title": "DISTRIBUTED WORKFLOWS & BACKEND ORCHESTRATION",
+                "desc": "Designing asynchronous workflows, message queues with Redis, and containerized backend microservices using FastAPI and Docker."
+            }
+        },
+        "profile": {
+            "title": "I like making AI actually work in software.",
+            "narrativeLabel": "Core Narrative",
+            "narrative": "I'm working toward becoming an AI engineer, with a focus on building AI-native applications that go beyond simply answering questions. Alongside that, I work with machine learning and deep learning, and explore LLMs, generative AI, and agents to understand how they can become part of useful software.",
+            "narrative2": "I enjoy taking those ideas from models and experiments into APIs, backends, and full-stack applications, and most of what I've learned has come from building end to end, running into things that don't work, and figuring out why until the pieces come together.",
+            "pillars": {
+                "reliable": {
+                    "title": "Robust by Design",
+                    "desc": "Engineered for reliability under scale and operational pressure."
+                },
+                "optimized": {
+                    "title": "Production-Ready",
+                    "desc": "From prototype to deployment with engineering discipline."
+                },
+                "maintainable": {
+                    "title": "Architected for Evolution",
+                    "desc": "Designed to grow, adapt, and sustain long-term system development."
+                },
+                "evolvable": {
+                    "title": "Data-Driven Intelligence",
+                    "desc": "Decisions powered by models, metrics, and measurable performance."
+                }
+            }
+        },
+        "closing": {
+            "discoverMore": "Discover More"
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle": "A showcase of my creative and technical work",
+        "search": "Search projects...",
+        "viewAll": "View All Projects",
+        "viewProject": "View Project",
+        "liveDemo": "Live Demo",
+        "sourceCode": "Source Code",
+        "techStack": "Tech Stack",
+        "tools": "Tools Used",
+        "highlights": "Highlights",
+        "challenges": "Challenges",
+        "filters": {
+            "all": "All",
+            "ongoing": "Ongoing",
+            "completed": "Completed"
+        },
+        "sections": {
+            "missionBrief": "Mission Brief",
+            "keyFeatures": "Key Features",
+            "engineeringChronicles": "Engineering Chronicles",
+            "visualGallery": "Visual Gallery",
+            "installation": "Installation Instructions",
+            "projectAccess": "Project Access",
+            "technologies": "Technologies",
+            "contents": "Table of Contents",
+            "moreProjects": "More Projects",
+            "backToProjects": "Back to Projects",
+            "viewMore": "View More",
+            "viewLess": "Show Less",
+            "solution": "Solution",
+            "liveDemo": "Live Demo",
+            "sourceCode": "Source Code"
+        },
+        "status": {
+            "ongoing": "Active Development",
+            "completed": "Completed Project"
+        },
+        "metadata": {
+            "role": "Role",
+            "timeline": "Timeline",
+            "team": "Team",
+            "techStack": "Tech Stack",
+            "roleValue": "Full Stack Dev",
+            "teamValue": "Individual",
+            "techStackValue": "{count} Technologies"
+        }
+    },
+    "skills": {
+        "title": "Skills & Tools",
+        "subtitle": "Technologies and tools I work with",
+        "hard": "Hard Skills",
+        "soft": "Soft Skills",
+        "technical": "Technical Proficiency",
+        "tools": "Tools & Software",
+        "pillars": "Core Pillars",
+        "achievements": "Verified Achievements",
+        "level": {
+            "beginner": "Beginner",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced",
+            "expert": "Expert"
+        }
+    },
+    "footer": {
+        "copyright": "All rights reserved.",
+        "madeWith": "Made with",
+        "more": "More",
+        "marquee": [
+            "AI Engineering",
+            "Autonomous Systems",
+            "Backend Architecture",
+            "Machine Learning",
+            "Full-Stack Development",
+            "AI-Native Software"
+        ],
+        "cta": {
+            "title": "Let's Build",
+            "titleHighlight": "Useful AI",
+            "subtitle": "Open to engineering collaborations in AI systems, backend architecture, and AI-native software."
+        },
+        "links": "LINKS",
+        "socials": "SOCIALS",
+        "localTime": "LOCAL TIME",
+        "version": "VERSION",
+        "versionEdition": "2026 © Edition"
+    },
+    "ctaSection": {
+        "title": "Let's build",
+        "together": "AI.",
+        "subtitle": "Open to engineering collaborations in AI systems, backend architecture, and AI-native software.",
+        "start": "Get in Touch",
+        "work": "View My Resume",
+        "words": {
+            "amazing": "useful",
+            "innovative": "intelligent",
+            "intelligent": "reliable",
+            "creative": "scalable"
+        },
+        "ribbon1": "AI ENGINEER • SOFTWARE ENGINEER • FULL-STACK DEVELOPER • AI SYSTEMS • MACHINE LEARNING • BACKEND ENGINEERING • AI-NATIVE APPLICATIONS • ",
+        "ribbon2": "PYTHON • PYTORCH • TRANSFORMERS • FASTAPI • REACT • TYPESCRIPT • POSTGRESQL • DOCKER • GCP • GIT • REDIS • SCIKIT-LEARN • "
+    },
+    "projectHeader": {
+        "title": "Architecting Digital Reality",
+        "subtitle": "A curated showcase of technical innovation and creative engineering. Exploring the frontiers of <span class='font-bold text-foreground'>Artificial Intelligence</span>, Machine Learning, Distributed Systems, and Intelligent Software."
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "notFound": "Page not found",
+        "backHome": "Back to Home",
+        "viewMore": "View More",
+        "readMore": "Read More",
+        "close": "Close",
+        "download": "Download",
+        "share": "Share",
+        "scrollAudit": "Scroll to explore"
+    },
+    "contact": {
+        "hero": {
+            "title": "LET'S TALK",
+            "subtitle": "Have an interesting problem, AI idea, or software to build? Let's talk.",
+            "ticker": {
+                "build": "BUILD SYSTEMS • TRAIN MODELS • DEPLOY AI • ARCHITECT SOFTWARE • ",
+                "freelance": "AUTONOMOUS AGENTS • DEEP LEARNING • FULL-STACK BACKENDS • SCALE RUNTIMES • "
+            }
+        },
+        "form": {
+            "name": "Your Name",
+            "email": "Email Address",
+            "subject": "Subject / Focus Area",
+            "messagePlaceholder": "Tell me about the problem, timeline, or idea...",
+            "submit": "SEND MESSAGE",
+            "sending": "DISPATCHING...",
+            "sent": "MESSAGE TRANSMITTED"
+        },
+        "faqData": [
+            {
+                "q": "What engineering engagements are you open to?",
+                "a": "I work on applied AI & machine learning systems, autonomous agentic runtimes, high-throughput backend services, and scalable full-stack applications. Open to engineering roles, ambitious AI technical projects, and collaborative research initiatives."
+            },
+            {
+                "q": "What is your primary technology stack?",
+                "a": "Python, PyTorch, Transformers, FastAPI, Temporal, PostgreSQL, Redis, Docker, GCP, modern React, and TypeScript."
+            },
+            {
+                "q": "Where are you located and how do you work?",
+                "a": "Based in Bengaluru, India (IST / UTC+5:30). Experienced in operating with distributed engineering teams and asynchronous communication."
+            },
+            {
+                "q": "How can we start a discussion?",
+                "a": "Drop a message through the contact form, send an email directly to vivekk.codes@gmail.com, or reach out on LinkedIn / GitHub."
+            }
+        ]
+    },
+    "chatbot": {
+        "title": "AI Assistant",
+        "subtitle": "Ask me about Vivek",
+        "placeholder": "Type a message...",
+        "greeting": "Hi, I'm Vivek's AI assistant. Ask me about what he builds, how it works, or the technologies behind it.",
+        "suggestions": [
+            "Who is Vivek?",
+            "What is he building?",
+            "Explore HITMAN",
+            "Explore VAANI"
+        ],
+        "error": "The assistant is temporarily unavailable. Please try again later.",
+        "invalidResponse": "Invalid response from server.",
+        "unknownError": "An unknown error occurred.",
+        "retry": "Try again",
+        "inputHint": "Enter to send, Shift+Enter for newline",
+        "close": "Close chat"
+    }
+}

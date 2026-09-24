@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="ld-grad1" x1="100" y1="350" x2="300" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground alignment baseline grid -->
+  <line x1="60" y1="340" x2="340" y2="340" stroke="#64748b" stroke-opacity="0.2" stroke-width="1.5"/>
+
+  <!-- Parallel follower vectors pointing upward with increasing momentum -->
+  <line x1="100" y1="320" x2="100" y2="240" stroke="#64748b" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="100" cy="240" r="3" fill="#64748b" fill-opacity="0.5"/>
+
+  <line x1="140" y1="320" x2="140" y2="200" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="140" cy="200" r="3.5" fill="#3b82f6"/>
+
+  <line x1="260" y1="320" x2="260" y2="200" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="260" cy="200" r="3.5" fill="#3b82f6"/>
+
+  <line x1="300" y1="320" x2="300" y2="240" stroke="#64748b" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="300" cy="240" r="3" fill="#64748b" fill-opacity="0.5"/>
+
+  <!-- Central chevron vanguard (directional arrowheads) -->
+  <!-- Level 1 chevron -->
+  <path d="M 140,270 L 200,220 L 260,270" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+
+  <!-- Level 2 chevron -->
+  <path d="M 150,210 L 200,165 L 250,210" stroke="#818cf8" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+
+  <!-- Level 3 Apex Vanguard chevron -->
+  <path d="M 160,140 L 200,95 L 240,140" stroke="url(#ld-grad1)" stroke-width="2.5" fill="none"/>
+
+  <!-- Leading spearhead vector ray reaching into apex -->
+  <line x1="200" y1="320" x2="200" y2="60" stroke="url(#ld-grad1)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Directional arrow tip at the very top -->
+  <polygon points="200,45 190,65 210,65" fill="#ec4899"/>
+
+  <!-- Apex beacon radiance -->
+  <circle cx="200" cy="55" r="15" stroke="#ec4899" stroke-opacity="0.3" stroke-width="1.5"/>
+  <circle cx="200" cy="55" r="30" stroke="#ec4899" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4 4"/>
+</svg>

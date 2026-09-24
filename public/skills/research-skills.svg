@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="rs-grad" x1="50" y1="50" x2="350" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Astrolabe / Observatory reticle rings -->
+  <circle cx="200" cy="200" r="160" stroke="#64748b" stroke-opacity="0.15" stroke-width="1"/>
+  <circle cx="200" cy="200" r="130" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 6"/>
+  <circle cx="200" cy="200" r="90" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="45" stroke="#ec4899" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Compass / Crosshair reticle lines -->
+  <line x1="200" y1="20" x2="200" y2="380" stroke="#64748b" stroke-opacity="0.2" stroke-width="1"/>
+  <line x1="20" y1="200" x2="380" y2="200" stroke="#64748b" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Angle measurement markers on dial -->
+  <line x1="72" y1="72" x2="86" y2="86" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="328" y1="72" x2="314" y2="86" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="72" y1="328" x2="86" y2="314" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="328" y1="328" x2="314" y2="314" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Scanning radar beam cone -->
+  <path d="M 200,200 L 320,80 A 170 170 0 0 0 200,30 Z" fill="url(#rs-grad)" fill-opacity="0.08"/>
+  <line x1="200" y1="200" x2="320" y2="80" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="2"/>
+  <line x1="200" y1="200" x2="200" y2="30" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- Spectral discovery points (data discoveries found in search space) -->
+  <circle cx="270" cy="75" r="4" fill="#38bdf8"/>
+  <circle cx="270" cy="75" r="9" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1"/>
+
+  <circle cx="230" cy="110" r="3" fill="#ec4899"/>
+  <circle cx="140" cy="140" r="3" fill="#818cf8" fill-opacity="0.6"/>
+  <circle cx="260" cy="270" r="3" fill="#64748b" fill-opacity="0.5"/>
+
+  <!-- Core observation singularity -->
+  <circle cx="200" cy="200" r="8" fill="#38bdf8"/>
+  <circle cx="200" cy="200" r="18" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+</svg>

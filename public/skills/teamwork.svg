@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="tw-grad" x1="100" y1="100" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer constellation circle -->
+  <circle cx="200" cy="200" r="140" stroke="#64748b" stroke-opacity="0.15" stroke-width="1.5" stroke-dasharray="4 8"/>
+
+  <!-- Tripartite node constellation forming an equilateral harmony cluster -->
+  <!-- Top Node (Alpha) -->
+  <circle cx="200" cy="110" r="28" stroke="#38bdf8" stroke-width="2" fill="#38bdf8" fill-opacity="0.08"/>
+  <circle cx="200" cy="110" r="8" fill="#38bdf8"/>
+
+  <!-- Bottom Right Node (Beta) -->
+  <circle cx="280" cy="265" r="28" stroke="#818cf8" stroke-width="2" fill="#818cf8" fill-opacity="0.08"/>
+  <circle cx="280" cy="265" r="8" fill="#818cf8"/>
+
+  <!-- Bottom Left Node (Gamma) -->
+  <circle cx="120" cy="265" r="28" stroke="#34d399" stroke-width="2" fill="#34d399" fill-opacity="0.08"/>
+  <circle cx="120" cy="265" r="8" fill="#34d399"/>
+
+  <!-- Triangular primary bonds -->
+  <line x1="200" y1="110" x2="280" y2="265" stroke="#818cf8" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="280" y1="265" x2="120" y2="265" stroke="#34d399" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="120" y1="265" x2="200" y2="110" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2"/>
+
+  <!-- Mutual resonance arcs overlapping in center -->
+  <circle cx="200" cy="210" r="45" stroke="url(#tw-grad)" stroke-width="1.5" stroke-dasharray="6 3"/>
+
+  <!-- Central consensus hub -->
+  <circle cx="200" cy="210" r="6" fill="#818cf8"/>
+
+  <!-- Struts connecting nodes directly to central hub -->
+  <line x1="200" y1="110" x2="200" y2="210" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <line x1="280" y1="265" x2="200" y2="210" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <line x1="120" y1="265" x2="200" y2="210" stroke="#34d399" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+  <!-- Micro satellite orbits around nodes -->
+  <circle cx="200" cy="65" r="4" fill="#38bdf8" fill-opacity="0.6"/>
+  <circle cx="320" cy="285" r="4" fill="#818cf8" fill-opacity="0.6"/>
+  <circle cx="80" cy="285" r="4" fill="#34d399" fill-opacity="0.6"/>
+</svg>

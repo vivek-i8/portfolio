@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="ad-grad" x1="50" y1="50" x2="350" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer rigid structural frame (cube/square) transitioning into fluid curvature -->
+  <rect x="70" y="70" width="260" height="260" rx="16" stroke="#64748b" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+  <!-- Morphing phase 1: Rounded diamond -->
+  <polygon points="200,60 340,200 200,340 60,200" stroke="#14b8a6" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Morphing phase 2: Organic topological spline curves -->
+  <path d="M 200,80 C 290,80 330,130 310,210 C 290,290 270,320 190,320 C 110,320 80,270 90,190 C 100,110 150,80 200,80 Z" stroke="url(#ad-grad)" stroke-width="2" fill="#06b6d4" fill-opacity="0.04"/>
+
+  <!-- Morphing phase 3: Inner high-fluidity contour -->
+  <path d="M 200,120 C 260,110 290,160 260,220 C 230,280 180,270 140,240 C 100,210 130,150 170,130 Z" stroke="#06b6d4" stroke-opacity="0.7" stroke-width="1.5"/>
+
+  <!-- Dynamic vector arrows indicating continuous state transformation -->
+  <path d="M 170,60 C 210,50 250,60 280,85" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="285,85 277,77 275,87" fill="#14b8a6"/>
+
+  <path d="M 340,230 C 345,270 325,305 295,325" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="295,325 301,317 305,326" fill="#06b6d4"/>
+
+  <path d="M 105,300 C 75,270 65,225 75,185" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="75,185 71,195 81,192" fill="#6366f1"/>
+
+  <!-- Core transformation singularity -->
+  <circle cx="200" cy="200" r="10" stroke="#14b8a6" stroke-width="2"/>
+  <circle cx="200" cy="200" r="3" fill="#06b6d4"/>
+</svg>

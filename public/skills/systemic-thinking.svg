@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="currentColor">
+  <!-- Distributed System Architecture / Hexagonal Mesh -->
+  <polygon points="200,80 290,135 290,245 200,300 110,245 110,135" stroke-width="1.5" opacity="0.4" />
+  <polygon points="200,120 260,155 260,225 200,260 140,225 140,155" stroke-width="2" opacity="0.7" />
+  <!-- Central Hub Connections -->
+  <line x1="200" y1="190" x2="200" y2="80" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <line x1="200" y1="190" x2="290" y2="135" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <line x1="200" y1="190" x2="290" y2="245" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <line x1="200" y1="190" x2="200" y2="300" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <line x1="200" y1="190" x2="110" y2="245" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <line x1="200" y1="190" x2="110" y2="135" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <!-- Orbital Flow Paths -->
+  <circle cx="200" cy="190" r="140" stroke-width="1" stroke-dasharray="5 8" opacity="0.3" />
+  <!-- Interconnected Nodes -->
+  <circle cx="200" cy="80" r="6" fill="#ffffff" />
+  <circle cx="290" cy="135" r="5" fill="currentColor" opacity="0.8" />
+  <circle cx="290" cy="245" r="5" fill="currentColor" opacity="0.8" />
+  <circle cx="200" cy="300" r="6" fill="#ffffff" />
+  <circle cx="110" cy="245" r="5" fill="currentColor" opacity="0.8" />
+  <circle cx="110" cy="135" r="5" fill="currentColor" opacity="0.8" />
+  <!-- Core Central Engine Node -->
+  <circle cx="200" cy="190" r="14" stroke-width="2" stroke="#ffffff" fill="none" />
+  <circle cx="200" cy="190" r="6" fill="#ffffff" />
+</svg>

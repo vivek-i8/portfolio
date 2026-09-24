@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="currentColor">
+  <defs>
+    <linearGradient id="grad-ps" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#888888" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+  <!-- Base Coordinate System -->
+  <circle cx="200" cy="200" r="160" stroke-width="1" stroke-dasharray="4 6" opacity="0.4" />
+  <circle cx="200" cy="200" r="110" stroke-width="1" opacity="0.3" />
+  <!-- Decision Tree / Solution Branching -->
+  <path d="M200 60 L200 130" stroke-width="2" stroke="url(#grad-ps)" />
+  <path d="M200 130 L130 200 L130 270" stroke-width="2" stroke="url(#grad-ps)" />
+  <path d="M200 130 L270 200 L270 270" stroke-width="2" stroke="url(#grad-ps)" />
+  <path d="M200 130 L200 240" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  <!-- Cross Convergence Lines -->
+  <path d="M130 270 L200 330 L270 270" stroke-width="2" stroke="url(#grad-ps)" />
+  <path d="M200 240 L200 330" stroke-width="2" stroke="#ffffff" />
+  <!-- Algorithmic Puzzle / Polyhedral Nodes -->
+  <polygon points="200,50 208,65 192,65" fill="currentColor" opacity="0.7" />
+  <circle cx="200" cy="130" r="6" fill="#ffffff" />
+  <circle cx="130" cy="200" r="5" fill="currentColor" opacity="0.8" />
+  <circle cx="270" cy="200" r="5" fill="currentColor" opacity="0.8" />
+  <circle cx="130" cy="270" r="4" fill="currentColor" opacity="0.5" />
+  <circle cx="270" cy="270" r="4" fill="currentColor" opacity="0.5" />
+  <circle cx="200" cy="240" r="4" fill="currentColor" opacity="0.5" />
+  <!-- Target Solution Node -->
+  <circle cx="200" cy="330" r="10" stroke-width="2" stroke="#ffffff" fill="none" />
+  <circle cx="200" cy="330" r="4" fill="#ffffff" />
+  <!-- Architectural Crosshairs -->
+  <line x1="80" y1="200" x2="100" y2="200" stroke-width="1" opacity="0.5" />
+  <line x1="300" y1="200" x2="320" y2="200" stroke-width="1" opacity="0.5" />
+  <line x1="200" y1="360" x2="200" y2="380" stroke-width="1" opacity="0.5" />
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="at-grad1" x1="0" y1="300" x2="350" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="at-fill" x1="200" y1="120" x2="200" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Coordinate grid axes -->
+  <line x1="60" y1="320" x2="360" y2="320" stroke="#64748b" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="320" stroke="#64748b" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Sub-grid lines -->
+  <line x1="60" y1="260" x2="360" y2="260" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+  <line x1="60" y1="200" x2="360" y2="200" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+  <line x1="60" y1="140" x2="360" y2="140" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+  <line x1="60" y1="80" x2="360" y2="80" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+
+  <line x1="120" y1="60" x2="120" y2="320" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+  <line x1="180" y1="60" x2="180" y2="320" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+  <line x1="240" y1="60" x2="240" y2="320" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+  <line x1="300" y1="60" x2="300" y2="320" stroke="#64748b" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+
+  <!-- Area curve fill -->
+  <path d="M 60,290 C 110,285 140,240 180,210 C 220,180 250,110 300,100 C 330,95 350,130 360,120 L 360,320 L 60,320 Z" fill="url(#at-fill)"/>
+
+  <!-- Primary analytical regression curve -->
+  <path d="M 60,290 C 110,285 140,240 180,210 C 220,180 250,110 300,100 C 330,95 350,130 360,120" stroke="url(#at-grad1)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Secondary distribution / variance curve -->
+  <path d="M 60,310 C 120,290 150,270 200,240 C 250,210 290,170 360,150" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Data sample points & error bounds -->
+  <g>
+    <line x1="120" y1="260" x2="120" y2="280" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="120" cy="270" r="3.5" fill="#38bdf8"/>
+
+    <line x1="180" y1="195" x2="180" y2="225" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="180" cy="210" r="4" fill="#38bdf8"/>
+
+    <line x1="240" y1="135" x2="240" y2="165" stroke="#6366f1" stroke-width="1"/>
+    <circle cx="240" cy="150" r="4.5" fill="#6366f1"/>
+
+    <line x1="300" y1="85" x2="300" y2="115" stroke="#818cf8" stroke-width="1"/>
+    <circle cx="300" cy="100" r="5" fill="#818cf8"/>
+  </g>
+
+  <!-- Trend vector tangent -->
+  <line x1="270" y1="120" x2="340" y2="70" stroke="#f43f5e" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="3 3"/>
+</svg>
