@@ -311,7 +311,7 @@ export default function CardNav({
                                 "w-[240px] p-4 flex flex-col justify-center gap-4 border-l",
                                 theme === 'dark' ? "border-white/5" : "border-black/5"
                             )}>
-                                <SidebarLink href="https://github.com/vivek-i8" icon={Github} title="GitHub" desc="@vivek-i8 — open source" theme={theme} pathname={pathname} />
+                                <SidebarLink href="https://github.com/vivek-i8" icon={Github} title="GitHub" desc="@vivek-i8 · open source" theme={theme} pathname={pathname} />
                                 <SidebarLink href="/contact" icon={Mail} title="Contact" desc="Let's work together" theme={theme} pathname={pathname} />
                             </div>
                         </div>

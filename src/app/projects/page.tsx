@@ -331,7 +331,7 @@ function ProjectListItem({
     );
 }
 
-// Curated badge color palette — vibrant but balanced for both light & dark modes
+// Curated badge color palette: vibrant but balanced for both light & dark modes
 const BADGE_COLORS = [
     { border: 'rgba(168, 85, 247, 0.5)', bg: 'rgba(168, 85, 247, 0.12)', text: 'rgb(168, 85, 247)' },   // purple
     { border: 'rgba(59, 130, 246, 0.5)', bg: 'rgba(59, 130, 246, 0.12)', text: 'rgb(59, 130, 246)' },    // blue
@@ -347,7 +347,7 @@ const BADGE_COLORS = [
     { border: 'rgba(217, 70, 239, 0.5)', bg: 'rgba(217, 70, 239, 0.12)', text: 'rgb(217, 70, 239)' },    // fuchsia
 ];
 
-// Deterministic color from string — same string always gets same color, but varied across badges
+// Deterministic color from string: same string always gets same color, but varied across badges
 function getBadgeColor(label: string, cardIndex: number) {
     let hash = 0;
     for (let i = 0; i < label.length; i++) {
@@ -398,7 +398,7 @@ function ProjectCard({ project, onClick, index, isLowPowerMode }: { project: Pro
         });
     };
 
-    // Use Lenis to detect scroll velocity — only runs work if this card is currently hovered
+    // Use Lenis to detect scroll velocity: only runs work if this card is currently hovered
     useLenis((lenis) => {
         if (isLowPowerMode || !isHoveredRef.current) return;
         const velocity = Math.abs(lenis.velocity);
@@ -929,7 +929,7 @@ export default function ProjectsPage() {
                         )}
                     </div>
 
-                    {/* View All Button — Magnetic Fill-Invert */}
+                    {/* View All Button: Magnetic Fill-Invert */}
                     {
                         filteredProjects.length > 10 && (
                             <motion.div

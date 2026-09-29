@@ -34,7 +34,7 @@ export default function ResumePage() {
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span>Back to Portfolio</span>
                     </Link>
-                    <h1 className="sr-only">Vivek Kumawat — Resume &amp; Technical Credentials</h1>
+                    <h1 className="sr-only">Vivek Kumawat · Resume &amp; Technical Credentials</h1>
                 </div>
 
                 <div className="flex items-center gap-4">

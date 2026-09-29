@@ -5,8 +5,8 @@ export const portfolioData: PortfolioData = {
     personal: {
         name: 'Vivek Kumawat',
         title: 'AI / ML Engineer',
-        subtitle: 'AI Engineer • Software Engineer | Bridging Technical Innovation with Strategic Execution',
-        bio: 'AI & Software Engineer based in Bengaluru, India. Hands-on expertise in building autonomous intelligent agents, machine learning architectures, acoustic voice clone detection, and scalable full-stack backend systems. Dedicated to engineering reliable, production-ready AI software that bridges advanced technical intelligence with strategic execution.',
+        subtitle: 'AI Engineer · Software Engineer | AI Systems & Software that Ships',
+        bio: 'AI and Software Engineer based in Bengaluru, India. Hands-on experience building autonomous agents, machine learning pipelines, acoustic deepfake detection, and full-stack backend systems. Focused on engineering reliable, production-ready AI software.',
         location: 'Bengaluru, India',
         email: 'vivekk.codes@gmail.com',
         phone: '',
@@ -75,7 +75,7 @@ export const portfolioData: PortfolioData = {
         {
             id: 'edu-1',
             institution: 'Jain University, Bengaluru',
-            degree: 'B.Tech — Computer Science & Engineering',
+            degree: 'B.Tech, Computer Science & Engineering',
             major: 'Artificial Intelligence & Machine Learning',
             startDate: '2024-08-01',
             endDate: '2028-06-30',

@@ -32,7 +32,7 @@ function getFastPathResponse(query: string): string | null {
 
     // Small talk - How are you?
     if (/^(how are you|how are you doing|hows it going|how are things)\??$/i.test(cleanQ)) {
-        return `Doing well — ready to talk about Vivek's work. What are you curious about?`;
+        return `Doing well, ready to talk about Vivek's work. What are you curious about?`;
     }
 
     // Critical / Skeptical input - "I don't like Vivek"
@@ -56,13 +56,13 @@ function getFastPathResponse(query: string): string | null {
 
     // Direct Bio / Who is Vivek
     if (/^(who (is|'s) (vivek|vivek kumawat|he)\??|about vivek\??|tell me about vivek\??|what does vivek (do|build)\??)$/i.test(cleanQ)) {
-        return `Vivek Kumawat is an **AI / ML Engineer** based in Bengaluru, India, pursuing a B.Tech in CSE (AIML Specialization) at Jain University (2024–2028).
+        return `Vivek Kumawat is an **AI / ML Engineer** based in Bengaluru, India, pursuing a B.Tech in CSE (AIML Specialization) at Jain University (2024-2028).
 
 He specializes in building:
-- **Agentic AI & Financial Infrastructure:** [HITMAN](/projects/hitman-ai) — an autonomous exception resolver separating LangGraph reasoning from deterministic policy execution.
-- **Speech Forensics:** [VAANI](/projects/vaani-voice-authenticity) — deepfake audio detection combining Wav2Vec2 acoustic fusion and Spectra-AASIST3 raw waveform models with calibrated inconclusive fallback.
-- **Semantic Search:** [Lumina](/projects/lumina-movie-engine) — 384-dim Sentence-BERT discovery engine with deterministic title re-ranking.
-- **Weather AI:** [SkySense](/projects/skysense-ai) — ML human comfort modeling with prompt-grounded meteorological telemetry.
+- **Agentic AI & Financial Infrastructure:** [HITMAN](/projects/hitman-ai): an autonomous exception resolver separating LangGraph reasoning from deterministic policy execution.
+- **Speech Forensics:** [VAANI](/projects/vaani-voice-authenticity): deepfake audio detection combining Wav2Vec2 acoustic fusion and Spectra-AASIST3 raw waveform models with calibrated inconclusive fallback.
+- **Semantic Search:** [Lumina](/projects/lumina-movie-engine): 384-dim Sentence-BERT discovery engine with deterministic title re-ranking.
+- **Weather AI:** [SkySense](/projects/skysense-ai): ML human comfort modeling with prompt-grounded meteorological telemetry.
 
 You can explore his technical projects at [/projects](/projects), check his skills at [/skills](/skills), or reach him via [/contact](/contact).`;
     }
@@ -84,7 +84,7 @@ You can explore his technical projects at [/projects](/projects), check his skil
 
     // Education / College / Degree
     if (/^(where (did|does) vivek study\??|what('?s| is) (his|vivek('?s)?) (education|college|university|degree)\??|education\??|college\??|university\??)$/i.test(cleanQ)) {
-        return `Vivek is pursuing his **B.Tech in Computer Science & Engineering (AIML Specialization)** at **Jain University, Bengaluru** (2024–2028, currently in his 3rd Year / 5th Semester). His focus is on distributed backend systems, speech ML forensics, and applied machine learning architectures.`;
+        return `Vivek is pursuing his **B.Tech in Computer Science & Engineering (AIML Specialization)** at **Jain University, Bengaluru** (2024-2028, currently in his 3rd Year / 5th Semester). His focus is on distributed backend systems, speech ML forensics, and applied machine learning architectures.`;
     }
 
     // Resume / CV
@@ -122,7 +122,7 @@ PERSONA & TONE:
 - Evaluation / Hiring questions -> present factual evidence from his projects without pretending to make the hiring decision.
 
 CONCISENESS & COMPLETION:
-- Keep answers high-signal, punchy, and complete (~120–220 tokens).
+- Keep answers high-signal, punchy, and complete (~120-220 tokens).
 - Always finish thoughts completely without trailing off.`;
 
     // Sliced topic contexts
@@ -158,7 +158,7 @@ CONCISENESS & COMPLETION:
 - Route: /projects/vaani-voice-authenticity | GitHub: https://github.com/vivek-i8/vaani-voice-authenticity
 - Core Principle: Dual independent acoustic/spectral classifiers combined via deterministic rule matrix. Explicitly issues "Inconclusive" verdicts when signals conflict or prediction entropy is high, rather than guessing.
 - Architecture:
-  * Audio Preprocessor: 16 kHz mono resampler, 1.5s–30s duration bounds, DC offset removal.
+  * Audio Preprocessor: 16 kHz mono resampler, 1.5s to 30s duration bounds, DC offset removal.
   * Signal A (Acoustic Fusion): 1024-dim Wav2Vec2 embeddings fused with psychoacoustic metrics (pitch jitter, spectral tilt, zero-crossing rate).
   * Signal B (Spectra-AASIST3): Raw waveform anti-spoofing deep graph neural network checking phase/spectral artifacts.
   * Reference Retrieval: Nearest human & synthetic exemplars via cosine similarity over calibrated database.
@@ -178,7 +178,7 @@ CONCISENESS & COMPLETION:
         contextBlock += `
 ### PROJECT: SKYSENSE (Weather Intelligence Platform)
 - Route: /projects/skysense-ai | GitHub: https://github.com/vivek-i8/skysense-ai
-- Core Principle: Strict prompt grounding — LLM reasons exclusively over live-fetched multi-provider meteorological telemetry, eliminating hallucinations.
+- Core Principle: Strict prompt grounding: LLM reasons exclusively over live-fetched multi-provider meteorological telemetry, eliminating hallucinations.
 - Architecture: FastAPI async ingestion backend, Scikit-learn regression comfort index model (0-100), Groq Llama 3.1 AI assistant (Nimbus), React 19 + TypeScript frontend.
 - Tech: Python 3.12, FastAPI, Scikit-learn, React 19, TypeScript, Groq Llama 3.1.`;
     }
@@ -211,8 +211,8 @@ CONCISENESS & COMPLETION:
         contextBlock += `
 ### BIO & EXPERIENCE:
 - Vivek Kumawat: AI / ML Engineer based in Bengaluru, India.
-- Education: B.Tech CSE (AIML Specialization) at Jain University, Bengaluru (2024–2028, 3rd Year).
-- Experience: AI/ML Intern at Harzio (June–July 2026) — data engineering, regression/classification dashboards, and SkySense AI capstone.
+- Education: B.Tech CSE (AIML Specialization) at Jain University, Bengaluru (2024-2028, 3rd Year).
+- Experience: AI/ML Intern at Harzio (June-July 2026): data engineering, regression/classification dashboards, and SkySense AI capstone.
 - Contact: Email: vivekk.codes@gmail.com | GitHub: https://github.com/vivek-i8 | LinkedIn: https://www.linkedin.com/in/vivekkumawat18/ | Resume: /resume`;
     }
 

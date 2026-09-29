@@ -301,7 +301,7 @@ export const GithubCalendar = memo(function GithubCalendar({
   className,
 }: GithubCalendarProps) {
   const id = useId();
-  // Scroll ref — used to auto-scroll to most recent months on compact viewports
+  // Scroll ref : used to auto-scroll to most recent months on compact viewports
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDark, setIsDark] = useState(false);
   const [gameActive, setGameActive] = useState(false);
@@ -410,7 +410,7 @@ export const GithubCalendar = memo(function GithubCalendar({
   const monthLabelHeight = showMonthLabels && !gameActive ? 20 : 0;
   const svgWidth = weeks.length * step - cellGap;
   const svgHeight = monthLabelHeight + 7 * step - cellGap;
-  // Auto-scroll to the right end (most recent months) — must be before early returns
+  // Auto-scroll to the right end (most recent months) : must be before early returns
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft = scrollRef.current.scrollWidth;

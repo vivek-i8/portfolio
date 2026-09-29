@@ -33,7 +33,7 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
                     <div className="p-8 relative z-10 transition-transform duration-500 group-hover:translate-x-1">
                         <div className="flex items-center gap-2 mb-4">
                             <span className="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                                Higher Education • 2024 — 2028
+                                Higher Education • 2024 - 2028
                             </span>
                         </div>
                         <h3 className="text-3xl font-black text-neutral-900 dark:text-white mb-2">Jain University</h3>
@@ -153,7 +153,7 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
                             Theoretical Rigor to Production Systems
                         </h3>
                         <p className="text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                            Combining classroom foundations with practical engineering practice — studying applied mathematics, algorithm optimization, and modern model architectures while deploying real-world AI applications.
+                            Combining classroom foundations with practical engineering practice: studying applied mathematics, algorithm optimization, and modern model architectures while deploying real-world AI applications.
                         </p>
                     </div>
 

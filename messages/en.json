@@ -29,11 +29,11 @@
     },
     "about": {
         "title": "About Me",
-        "subtitle": "Tech Explorer & Problem Solver",
-        "description": "A passionate tech explorer specializing in Full Stack Development, Artificial Intelligence, and Data Science. Currently diving deep into AI Agents and Blockchain technology.",
+        "subtitle": "AI & Software Engineering",
+        "description": "AI and Software Engineer specializing in machine learning, backend services, and AI-native applications.",
         "identity": "Identity Link Established",
-        "architecting": "Architecting",
-        "digitalReality": "Digital Reality",
+        "architecting": "Engineering",
+        "digitalReality": "Intelligent Software",
         "leadIn": {
             "label": "WHAT I DO",
             "tagline": "CORE FOCUS",
@@ -53,8 +53,8 @@
         "coreEngineering": {
             "label": "Core Engineering",
             "title": "Proven <span class='text-primary italic font-serif font-light lowercase'>stack.</span> <br /> Measurable <span class='italic font-serif font-light text-foreground'>results.</span>",
-            "p1": "I develop applied AI systems using TensorFlow, Scikit-learn, and LangChain, structuring workflows and exposing models as services through Flask and FastAPI.",
-            "p2": "Integrated into full-stack apps with Next.js, Express.js, and Spring Boot, backed by PostgreSQL and Prisma ORM.",
+            "p1": "I develop applied AI systems using PyTorch, Scikit-learn, and LangGraph, structuring workflows and exposing models as services through FastAPI.",
+            "p2": "Integrated into full-stack apps with Next.js and React, backed by PostgreSQL and Redis.",
             "p3": "All projects use disciplined version control, Docker containerization, and are built for stable production deployment.",
             "gpa": "Academic GPA",
             "projects": "Projects Built",
@@ -65,7 +65,7 @@
             "title": "EMERGING RESEARCH <span class='italic font-serif font-light text-primary lowercase'>&</span> EXPANSION",
             "agentic": {
                 "title": "AGENTIC AI SYSTEMS",
-                "desc": "Exploring autonomous agents, multi-agent orchestration, and reasoning frameworks — extending my applied AI foundation into self-directed decision-making systems."
+                "desc": "Exploring autonomous agents, multi-agent orchestration, and reasoning frameworks: extending my applied AI foundation into self-directed decision-making systems."
             },
             "web3": {
                 "title": "DISTRIBUTED WORKFLOWS & BACKEND ORCHESTRATION",
@@ -203,8 +203,8 @@
         "ribbon2": "PYTHON • PYTORCH • TRANSFORMERS • FASTAPI • REACT • TYPESCRIPT • POSTGRESQL • DOCKER • GCP • GIT • REDIS • SCIKIT-LEARN • "
     },
     "projectHeader": {
-        "title": "Architecting Digital Reality",
-        "subtitle": "A curated showcase of technical innovation and creative engineering. Exploring the frontiers of <span class='font-bold text-foreground'>Artificial Intelligence</span>, Machine Learning, Distributed Systems, and Intelligent Software."
+        "title": "Selected Projects",
+        "subtitle": "A showcase of technical projects across <span class='font-bold text-foreground'>Artificial Intelligence</span>, machine learning architectures, and backend systems."
     },
     "common": {
         "loading": "Loading...",

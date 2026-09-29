@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             canonical: `/projects/${project.slug}`,
         },
         openGraph: {
-            title: `${project.title} — Vivek Kumawat`,
+            title: `${project.title} · Vivek Kumawat`,
             description: project.description,
             type: 'article',
             images: project.image ? [{ url: project.image }] : undefined,

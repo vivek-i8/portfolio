@@ -28,7 +28,7 @@ const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://vivekk.runs-on.dev
 
 export const metadata: Metadata = {
     title: {
-        default: 'Vivek Kumawat — AI Engineer | AI Systems & Software',
+        default: 'Vivek Kumawat · AI Engineer | AI Systems & Software',
         template: '%s | Vivek Kumawat',
     },
     description: 'Portfolio of Vivek Kumawat, an AI Engineer based in Bengaluru building autonomous agent architectures, model evaluation pipelines, acoustic audio analysis, and reliable full-stack software systems.',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         type: 'website',
         locale: 'en_US',
         url: siteUrl,
-        title: 'Vivek Kumawat — AI Engineer | AI Systems & Software',
+        title: 'Vivek Kumawat · AI Engineer | AI Systems & Software',
         description: 'Explore the portfolio, production systems, machine learning architectures, and engineering research of Vivek Kumawat.',
         siteName: 'Vivek Kumawat',
         images: [
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
                 url: '/opengraph-image',
                 width: 1200,
                 height: 630,
-                alt: 'Vivek Kumawat — AI Systems & Software Portfolio',
+                alt: 'Vivek Kumawat · AI Systems & Software Portfolio',
             }
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Vivek Kumawat — AI Engineer | AI Systems & Software',
+        title: 'Vivek Kumawat · AI Engineer | AI Systems & Software',
         description: 'Autonomous agents, model evaluation pipelines, acoustic audio analysis, and full-stack software built by Vivek Kumawat.',
         creator: '@vivekxspace',
         images: ['/opengraph-image'],

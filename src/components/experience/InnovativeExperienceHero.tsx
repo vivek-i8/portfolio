@@ -24,7 +24,7 @@ interface InnovativeExperienceHeroProps {
 // Grounded engineering evolution nodes representing Vivek Kumawat's actual technical trajectory
 const NODES_DATA: Record<string, NodeData[]> = {
     education: [
-        { label: 'Jain University', description: 'B.Tech CSE with AI & Machine Learning Specialization (2024–2028).', orbitIndex: 0, position: 0.1 },
+        { label: 'Jain University', description: 'B.Tech CSE with AI & Machine Learning Specialization (2024-2028).', orbitIndex: 0, position: 0.1 },
         { label: 'Data Structures & Algorithms', description: 'Algorithmic problem solving, complexity analysis, and optimization.', orbitIndex: 1, position: 0.25 },
         { label: 'Machine Learning Foundations', description: 'Supervised & unsupervised learning, statistical evaluation, and loss mechanics.', orbitIndex: 0, position: 0.45 },
         { label: 'Database Systems', description: 'Relational data modeling with PostgreSQL and distributed query optimization.', orbitIndex: 1, position: 0.65 },

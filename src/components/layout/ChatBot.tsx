@@ -656,7 +656,7 @@ export function ChatBot({ headless = false }: { headless?: boolean }) {
     const [hasNewMsg, setHasNewMsg] = useState(false);
     const [origin, setOrigin] = useState<{ x: number; y: number } | null>(null);
 
-    // In-memory messages state — completely resets on every browser refresh
+    // In-memory messages state : completely resets on every browser refresh
     const [messages, setMessages] = useState<Message[]>(() => [
         {
             id: generateId(),
@@ -722,7 +722,7 @@ export function ChatBot({ headless = false }: { headless?: boolean }) {
                 )}
             </AnimatePresence>
 
-            {/* Trigger button — globally fixed corner button */}
+            {/* Trigger button : globally fixed corner button */}
             {!headless && (
                 <motion.button
                     onClick={toggle}

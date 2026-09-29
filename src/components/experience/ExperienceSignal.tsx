@@ -73,8 +73,8 @@ function ExperienceSignal({
                     <div className="divide-y divide-white/[0.06]">
                         {experiences.map((exp, idx) => {
                             const period = exp.endDate
-                                ? `${formatDate(exp.startDate)} — ${formatDate(exp.endDate)}`
-                                : `${formatDate(exp.startDate)} — Present`;
+                                ? `${formatDate(exp.startDate)} - ${formatDate(exp.endDate)}`
+                                : `${formatDate(exp.startDate)} - Present`;
 
                             return (
                                 <article
