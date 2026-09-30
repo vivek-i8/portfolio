@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform, AnimatePresence, type MotionValue } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowDownRight, Github, ArrowRight } from "lucide-react";
 import MagneticEffect from "@/components/effects/MagneticEffect";
 import TechStackPanel from "./TechStackPanel";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { CANONICAL_PROJECTS, PROJECT_IMAGE_FRAMING, PROJECT_ACCENTS } from "@/data/projects";
 import { Project } from "@/types";
-import { ProjectDetail } from "@/components/projects/ProjectDetail";
 
 // Asset filename -> honest label, e.g. "/projects/vaani-home.png" -> "VAANI HOME"
 const assetLabel = (src: string) =>
@@ -141,7 +141,7 @@ export function ScrollHijackSection() {
 }
 
 /** One compact editorial project card: information left, real screenshot right, scroll-reactive focus. */
-function ProjectCard({ project, index, onSelect }: { project: Project; index: number; onSelect: () => void }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
     const ref = useRef<HTMLElement>(null);
     const { focus, opacity, scale, y, imageOpacity } = useCardFocus(ref);
     const accent = PROJECT_ACCENTS[project.slug] ?? { rgb: "255, 255, 255", hoverBorder: "hover:border-white/20" };
@@ -178,14 +178,13 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
                         </p>
 
                         <div className="flex flex-wrap items-center gap-3 pt-2">
-                            <button
-                                type="button"
-                                onClick={onSelect}
+                            <Link
+                                href={`/projects/${project.slug}`}
                                 className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full bg-white text-black text-sm font-semibold tracking-tight hover:bg-[#c1e44a] transition-colors duration-300 group/btn cursor-pointer"
                             >
                                 <span>View Details</span>
                                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
-                            </button>
+                            </Link>
 
                             {project.repoUrl && (
                                 <a
@@ -204,19 +203,24 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
 
                     {shot && (
                         <figure className="w-full md:w-[44%] md:max-w-[440px] shrink-0 space-y-2.5">
-                            <motion.div
-                                style={{ opacity: imageOpacity }}
-                                className="relative w-full aspect-[16/10] rounded-xl md:rounded-2xl overflow-hidden border border-white/[0.08] bg-black/40 cursor-pointer"
-                                onClick={onSelect}
+                            <Link
+                                href={`/projects/${project.slug}`}
+                                className="block"
+                                aria-label={`View details for ${project.title}`}
                             >
-                                <Image
-                                    src={shot}
-                                    alt={`${project.title} interface`}
-                                    fill
-                                    className={`object-cover ${frameClass(shot)} transition-transform duration-700 ease-out group-hover:scale-[1.02]`}
-                                    sizes="(max-width: 768px) 100vw, 440px"
-                                />
-                            </motion.div>
+                                <motion.div
+                                    style={{ opacity: imageOpacity }}
+                                    className="relative w-full aspect-[16/10] rounded-xl md:rounded-2xl overflow-hidden border border-white/[0.08] bg-black/40 cursor-pointer"
+                                >
+                                    <Image
+                                        src={shot}
+                                        alt={`${project.title} interface`}
+                                        fill
+                                        className={`object-cover ${frameClass(shot)} transition-transform duration-700 ease-out group-hover:scale-[1.02]`}
+                                        sizes="(max-width: 768px) 100vw, 440px"
+                                    />
+                                </motion.div>
+                            </Link>
                             <figcaption className="font-departure text-[10px] uppercase tracking-[0.2em] text-white/30">
                                 {assetLabel(shot).startsWith("IMAGE") ? `${project.title} SYSTEM OVERVIEW` : assetLabel(shot)}
                             </figcaption>
@@ -230,8 +234,6 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
 
 
 export const UnifiedProjectShowcase = () => {
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
     return (
         <section id="projects" className="relative w-full bg-black text-white selection:bg-zinc-800 selection:text-white">
             <div className="w-full flex flex-col items-center gap-10 md:gap-14 px-4 sm:px-6 md:px-8 pt-6 md:pt-8 pb-16 md:pb-24 max-w-[1240px] mx-auto">
@@ -240,19 +242,9 @@ export const UnifiedProjectShowcase = () => {
                         key={project.slug}
                         project={project}
                         index={idx}
-                        onSelect={() => setSelectedProject(project)}
                     />
                 ))}
             </div>
-
-            <AnimatePresence>
-                {selectedProject && (
-                    <ProjectDetail
-                        project={selectedProject}
-                        onClose={() => setSelectedProject(null)}
-                    />
-                )}
-            </AnimatePresence>
         </section>
     );
 };
