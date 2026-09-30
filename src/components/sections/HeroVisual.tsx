@@ -122,6 +122,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
 
   return (
     <motion.div
+      id="hero"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="relative min-h-screen w-full flex flex-col bg-background text-foreground overflow-hidden selection:bg-primary/20"

@@ -31,10 +31,8 @@ function useCardFocus(ref: React.RefObject<HTMLElement | null>) {
     const isMobile = useIsMobile();
 
     // desktop values (kept subtle: the neighbours stay readable, never blurred)
-    const opacityDesktop = useTransform(focus, [0, 1], [1, 0.72]);
-    const scaleDesktop = useTransform(focus, [0, 1], [1, 0.985]);
-    const yDesktop = useTransform(focus, [0, 1], [0, 12]);
-    const imageDesktop = useTransform(focus, [0, 1], [1, 0.82]);
+    const opacityDesktop = useTransform(focus, [0, 1], [1, 0.75]);
+    const imageDesktop = useTransform(focus, [0, 1], [1, 0.85]);
 
     // mobile values: same idea, no scaling
     const opacityMobile = useTransform(focus, [0, 1], [1, 0.88]);
@@ -43,8 +41,8 @@ function useCardFocus(ref: React.RefObject<HTMLElement | null>) {
     return {
         focus,
         opacity: isMobile ? opacityMobile : opacityDesktop,
-        scale: isMobile ? 1 : scaleDesktop,
-        y: isMobile ? 0 : yDesktop,
+        scale: 1,
+        y: 0,
         imageOpacity: isMobile ? imageMobile : imageDesktop,
     };
 }
@@ -125,7 +123,7 @@ export function ScrollHijackSection() {
     const xShift = useTransform(scrollYProgress, [0, 0.1, 0.95, 1], ["0vw", "0vw", "-100vw", "-100vw"]);
 
     return (
-        <div ref={ref} className="relative h-[150vh] w-full">
+        <div ref={ref} id="tech-stack" className="relative h-[150vh] w-full">
             <div className="sticky top-0 h-screen w-full overflow-hidden z-10">
                 <motion.div className="flex h-full" style={{ width: "200vw", x: xShift, y: 0 }}>
                     <div className="relative flex h-full w-screen flex-shrink-0 items-center justify-center rounded-[40px] border border-white/[0.12] bg-black md:rounded-[56px] tech-stack-panel">

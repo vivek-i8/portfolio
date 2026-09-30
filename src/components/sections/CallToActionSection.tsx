@@ -1,19 +1,12 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from 'next-intl';
 import { Mail, Layers } from "lucide-react";
 import { InfiniteRibbon } from "@/components/ui/infinite-ribbon";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 
-if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger);
-}
-
 export default function CallToActionSection() {
-    const sectionRef = useRef<HTMLElement>(null);
     const t = useTranslations('ctaSection');
     const words = [t('words.amazing'), t('words.innovative'), t('words.intelligent'), t('words.creative')];
     const [currentWord, setCurrentWord] = useState(0);
@@ -25,29 +18,8 @@ export default function CallToActionSection() {
         return () => clearInterval(interval);
     }, [words.length]);
 
-    useEffect(() => {
-        if (!sectionRef.current) return;
-
-        const ctx = gsap.context(() => {
-            gsap.fromTo('.cta-content',
-                { y: 80, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: 'top 70%',
-                    },
-                }
-            );
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, []);
-
     return (
-        <section ref={sectionRef} className="relative py-12 lg:py-16 overflow-hidden bg-background">
+        <section id="contact" className="relative py-12 lg:py-16 overflow-hidden bg-background">
             {/* Infinite Ribbons - Moved from Stats Section */}
             <div className="relative flex h-[300px] w-full items-center justify-center pointer-events-none mb-10">
                 <InfiniteRibbon rotation={6} baseVelocity={1} className="z-10 py-5 border-y border-blue-200 dark:border-white/5 shadow-xl" background="bg-white dark:bg-zinc-900" textColor="text-blue-700 dark:text-zinc-400 font-mono tracking-tighter">
@@ -58,7 +30,13 @@ export default function CallToActionSection() {
                 </InfiniteRibbon>
             </div>
 
-            <div className="max-w-[1600px] mx-auto relative z-10 px-6 md:px-12 lg:px-24 text-center cta-content mt-16">
+            <motion.div
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                className="max-w-[1600px] mx-auto relative z-10 px-6 md:px-12 lg:px-24 text-center mt-16"
+            >
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-0">
                     {t('title')}
                     <br />
@@ -111,7 +89,7 @@ export default function CallToActionSection() {
                         <span>{t('work')}</span>
                     </MagneticButton>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

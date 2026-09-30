@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import {
     motion,
     useAnimationFrame,
+    useInView,
     useMotionValue,
     useScroll,
     useSpring,
@@ -124,9 +125,12 @@ const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
             return `${wrap(-copyWidth, 0, v)}px`;
         });
 
+        const containerRef = useRef<HTMLDivElement>(null);
+        const isInView = useInView(containerRef, { margin: "200px" });
+
         const directionFactor = useRef<number>(1);
         useAnimationFrame((t, delta) => {
-            if (isLowPowerMode) return; // Completely freeze the ticker in low power mode to save CPU
+            if (isLowPowerMode || !isInView) return; // Completely freeze the ticker when offscreen or in low power mode to save CPU
 
             let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
@@ -147,6 +151,7 @@ const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
 
         return (
             <div
+                ref={containerRef}
                 className={cn("relative overflow-hidden", parallaxClassName)}
                 style={parallaxStyle}
             >

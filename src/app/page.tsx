@@ -2,14 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { LoadingScreen } from '@/components/layout';
 import { DeferredMount } from '@/components/ui/DeferredMount';
-
-if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-}
 
 import AboutSection from "@/components/sections/AboutSection";
 import ExpertiseSection from "@/components/sections/ExpertiseSection";
@@ -53,39 +47,15 @@ export default function HomePage() {
             setSkipAnimation(true);
             setIsLoading(false);
         }
-
-        if (typeof window === 'undefined' || !('ResizeObserver' in window)) return;
-        const refreshLayout = () => {
-            window.dispatchEvent(new Event('resize'));
-            ScrollTrigger.refresh();
-        };
-        const resizeObserver = new ResizeObserver(() => { refreshLayout(); });
-        resizeObserver.observe(document.body);
-        window.addEventListener('load', refreshLayout);
-        return () => {
-            resizeObserver.disconnect();
-            window.removeEventListener('load', refreshLayout);
-            ScrollTrigger.getAll().forEach(t => t.kill());
-        };
     }, []);
 
     // Content animates once the first-visit loader finishes, or once the arc preloader starts revealing.
     const isReadyToAnimate = isLoading ? isInitialLoadingExit : (phase === "reveal" || phase === "done");
 
-    useEffect(() => {
-        if (isReadyToAnimate) {
-            const timer = setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 1500); // Once, after transition is likely done
-            return () => clearTimeout(timer);
-        }
-    }, [isReadyToAnimate]);
-
     const handleLoadingComplete = () => {
         setIsLoading(false);
         window.scrollTo({ top: 0, behavior: 'instant' });
         sessionStorage.setItem('portfolioLoaded', 'true');
-        setTimeout(() => { ScrollTrigger.refresh(); }, 100);
     };
 
     const handleExitStart = () => {
@@ -103,7 +73,7 @@ export default function HomePage() {
                     ease: skipAnimation ? "linear" : [0.16, 1, 0.3, 1], // Expo out for snappy yet smooth feel
                     opacity: { duration: skipAnimation ? 0 : 0.8 }
                 }}
-                className="relative overflow-x-clip will-change-transform will-change-opacity"
+                className="relative overflow-x-clip"
             >
                 <HeroVisual isExiting={isReadyToAnimate} />
 

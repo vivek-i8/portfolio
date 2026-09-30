@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 import { UnifiedProjectShowcase, ScrollHijackSection } from "./IdentitySequence";
@@ -122,11 +122,10 @@ const AuditFunnel = () => {
 
     const scale = useTransform(scrollYProgress, [0, 0.5], [0.6, 1]);
 
-    const { scrollYProgress: exitProgressRaw } = useScroll({
+    const { scrollYProgress: exitProgress } = useScroll({
         target: sectionRef,
         offset: ["start start", "end start"]
     });
-    const exitProgress = useSpring(exitProgressRaw, { stiffness: 100, damping: 30, restDelta: 0.001 });
     const yExit = useTransform(exitProgress, [0, 1], ["0%", "40%"]);
     const scaleExit = useTransform(exitProgress, [0, 1], [1, 0.85]);
     const opacityExit = useTransform(exitProgress, [0, 1], [1, 0]);
@@ -156,7 +155,7 @@ const AuditFunnel = () => {
                     className="space-y-6 md:space-y-10 flex flex-col items-center px-6 relative z-10 mix-blend-difference w-full"
                 >
                     <motion.h4
-                        style={{ scale, willChange: "transform" }}
+                        style={{ scale }}
                         className="text-4xl md:text-6xl lg:text-[7rem] font-black tracking-[-0.05em] text-white max-w-7xl tracking-tighter leading-[0.9] lg:px-6 uppercase text-center"
                     >
                         {t('architecting')} <br></br>
@@ -213,7 +212,7 @@ export default function AboutSection() {
             ref={containerRef}
             className="relative bg-background text-foreground dark:bg-black dark:text-white transition-colors duration-500"
         >
-            <div className="sticky top-0 h-screen w-full flex items-center justify-center z-0 overflow-hidden pointer-events-none">
+            <div id="core-focus" className="sticky top-0 h-screen w-full flex items-center justify-center z-0 overflow-hidden pointer-events-none">
                 <motion.div
                     style={{ scale, opacity, y: yLeadIn }}
                     className="relative px-4 md:px-6 w-full max-w-[1700px] mx-auto pointer-events-auto"

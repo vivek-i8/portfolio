@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useState, useCallback, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
@@ -61,12 +61,14 @@ export function Navbar() {
     const navItems = useNavItems();
     const { resolvedTheme } = useTheme();
     const pathname = usePathname();
-    const { scrollY } = useScroll();
 
     const [isVisible, setIsVisible] = useState(true);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const lastScrollYRef = useRef(0);
+    const isVisibleRef = useRef(true);
+    const isScrolledRef = useRef(false);
+    const isMenuOpenRef = useRef(false);
     const [mounted, setMounted] = useState(false);
     
     // Consume preload state directly from context
@@ -77,6 +79,9 @@ export function Navbar() {
     useEffect(() => {
         setMounted(true);
     }, []);
+
+    // Keep ref in sync with state
+    useEffect(() => { isMenuOpenRef.current = isMenuOpen; }, [isMenuOpen]);
 
     // Lock body scroll when menu is open
     useEffect(() => {
@@ -95,20 +100,36 @@ export function Navbar() {
         setIsMenuOpen(false);
     }, [pathname]);
 
-    useMotionValueEvent(scrollY, 'change', (latest) => {
-        if (isMenuOpen) return; // Don't hide navbar when menu is open
+    // Native passive scroll listener - avoids Framer Motion's useScroll + useMotionValueEvent overhead
+    useEffect(() => {
+        let ticking = false;
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                ticking = false;
+                if (isMenuOpenRef.current) return;
 
-        const direction = latest > lastScrollY ? 'down' : 'up';
-        setIsScrolled(latest > 50);
+                const latest = window.scrollY;
+                const direction = latest > lastScrollYRef.current ? 'down' : 'up';
+                const shouldBeScrolled = latest > 50;
+                const shouldBeVisible = !(direction === 'down' && latest > 100);
 
-        if (direction === 'down' && latest > 100) {
-            setIsVisible(false);
-        } else {
-            setIsVisible(true);
-        }
+                if (isScrolledRef.current !== shouldBeScrolled) {
+                    isScrolledRef.current = shouldBeScrolled;
+                    setIsScrolled(shouldBeScrolled);
+                }
+                if (isVisibleRef.current !== shouldBeVisible) {
+                    isVisibleRef.current = shouldBeVisible;
+                    setIsVisible(shouldBeVisible);
+                }
 
-        setLastScrollY(latest);
-    });
+                lastScrollYRef.current = latest;
+            });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     const toggleMenu = useCallback(() => {
         setIsMenuOpen((prev) => !prev);

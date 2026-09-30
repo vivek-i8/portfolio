@@ -20,6 +20,7 @@ const eslintConfig = defineConfig([
     '.agents/**',
     '.freebuff/**',
     '.qodo/**',
+    'reference-repo/**',
   ]),
 ]);
 
